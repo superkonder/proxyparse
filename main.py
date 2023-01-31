@@ -23,6 +23,7 @@ async def parse():
         responce6 = requests.get(
             f'https://raw.githubusercontent.com/saschazesiger/Free-Proxies/master/proxies/{type}.txt').text
         # временно не работает responce7 = requests.get(f'https://neversquad.xyz/v2/api?request=getproxy&hwid=FREE&proxy_type={type}').text
+        responce8 = requests.get(f'https://proxyspace.pro/{type}.txt').text
         f = open(f'proxys/{type}.txt', 'w')
         f.write(responce)
         f.write(responce2)
@@ -31,6 +32,7 @@ async def parse():
         f.write(responce5)
         f.write(responce6)
         #f.write(responce7)
+        f.write(responce8)
         f.close()
 
 
