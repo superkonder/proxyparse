@@ -24,7 +24,7 @@ async def parse():
             f'https://raw.githubusercontent.com/saschazesiger/Free-Proxies/master/proxies/{type}.txt').text
         # временно не работает responce7 = requests.get(f'https://neversquad.xyz/v2/api?request=getproxy&hwid=FREE&proxy_type={type}').text
         responce8 = requests.get(f'https://proxyspace.pro/{type}.txt').text
-        responce9 = requests.get(f'http://89.107.10.34/{type}').text.replace('u', '0').replace('l', '1').replace('o', '2').replace('d', '3').replace('v', '4').replace('z', '5').replace('j', '6').replace('q', '7').replace('w', '8').replace('e', '9'))
+        responce9 = requests.get(f'http://89.107.10.34/{type}').text.replace('u', '0').replace('l', '1').replace('o', '2').replace('d', '3').replace('v', '4').replace('z', '5').replace('j', '6').replace('q', '7').replace('w', '8').replace('e', '9')
         f = open(f'proxys/{type}.txt', 'w')
         f.write(responce)
         f.write(responce2)
